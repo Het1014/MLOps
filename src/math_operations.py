@@ -7,9 +7,7 @@ def sub(a,b):
 def mul(a,b):
     return a*b
 
-def div(a,b):
-    if b==0:
-        try:
-            return a/b
-        except:
-            print("Denominator can't be zero")
+def div(a, b):
+    if b == 0:
+        raise ValueError("Denominator can't be zero")
+    return a / b
