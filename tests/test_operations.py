@@ -17,4 +17,5 @@ def test_mul():
 def test_div():
     assert div(2,1) == 2
     assert div(3,2) == 1.5
-    assert div(10,0) == "Denominator can't be zero"
+    with pytest.raises(ValueError, match="Denominator can't be zero"):
+        div(10,0)
